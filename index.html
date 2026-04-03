@@ -3,16 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mon site avec Radio Kalys</title>
+<title>Radios Stylées</title>
 <style>
   body {
     font-family: Arial, sans-serif;
     background: #121212;
     color: #fff;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    gap: 40px;
   }
 
   .radio-kalys {
@@ -65,10 +67,18 @@
 </head>
 <body>
 
+<!-- Premier radio : Kalys -->
 <label class="radio-kalys">
-  <input type="radio" name="kalys" />
+  <input type="radio" name="radio-style" />
   <div class="radio-custom"></div>
   <span class="radio-label">Kalys</span>
+</label>
+
+<!-- Deuxième radio : La radio qui a du chien ! -->
+<label class="radio-kalys">
+  <input type="radio" name="radio-style" />
+  <div class="radio-custom"></div>
+  <span class="radio-label">La radio qui a du chien !</span>
 </label>
 
 </body>

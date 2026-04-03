@@ -1,78 +1,86 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        img-src 'self' https://ton-vps.com;
-        media-src https://ton-vps.com;
-        style-src 'self' 'unsafe-inline';
-        script-src 'self';
-    ">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radio Kalys</title>
-    <style>
-        /* Styles généraux */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to bottom, #1e1e1e, #2c2c2c);
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            text-align: center;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-            font-size: 2.5rem;
-            color: #ffcc00;
-            text-shadow: 2px 2px 5px #000;
-        }
-
-        /* Logo */
-        .logo {
-            max-width: 250px;
-            width: 80%;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-            margin-bottom: 30px;
-            transition: transform 0.3s;
-        }
-        .logo:hover {
-            transform: scale(1.05);
-        }
-
-        /* Lecteur audio moderne */
-        audio {
-            width: 100%;
-            max-width: 400px;
-            outline: none;
-        }
-
-        /* Pied de page */
-        footer {
-            margin-top: 40px;
-            font-size: 0.9rem;
-            color: #bbb;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self' https://ton-vps.com;
+    media-src https://ton-vps.com;
+    style-src 'self' 'unsafe-inline';
+    script-src 'self';
+">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radio Kalys</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to bottom, #1b1b1b, #2f2f2f);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        text-align: center;
+    }
+    h1 {
+        margin-top: 50px;
+        font-size: 3rem;
+        color: #ffcc00;
+        text-shadow: 2px 2px 6px #000;
+    }
+    .logo {
+        max-width: 250px;
+        width: 70%;
+        border-radius: 15px;
+        box-shadow: 0 0 25px rgba(0,0,0,0.5);
+        margin: 30px 0;
+        transition: transform 0.3s;
+    }
+    .logo:hover {
+        transform: scale(1.05);
+    }
+    /* Lecteur flottant */
+    .audio-player {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 500px;
+        background: rgba(0,0,0,0.8);
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.7);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    audio {
+        width: 100%;
+        outline: none;
+        border-radius: 10px;
+    }
+    footer {
+        margin-top: 80px;
+        font-size: 0.9rem;
+        color: #bbb;
+    }
+</style>
 </head>
 <body>
-    <h1>Radio Kalys</h1>
-    <img class="logo" src="https://ton-vps.com/images/radio-kalys-logo.png" alt="Logo Radio Kalys">
-    
+<h1>Radio Kalys</h1>
+<img class="logo" src="https://ton-vps.com/images/radio-kalys-logo.png" alt="Logo Radio Kalys">
+
+<div class="audio-player">
     <audio controls autoplay>
         <source src="https://ton-vps.com/audio/stream.mp3" type="audio/mpeg">
         Votre navigateur ne supporte pas la lecture audio.
     </audio>
+</div>
 
-    <footer>
-        &copy; 2026 Radio Kalys. Tous droits réservés.
-    </footer>
+<footer>
+    &copy; 2026 Radio Kalys. Tous droits réservés.
+</footer>
 </body>
 </html>
